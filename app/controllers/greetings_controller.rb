@@ -4,6 +4,7 @@ class GreetingsController < ApplicationController
   # GET /greetings
   # GET /greetings.json
   def index
+    logger.info 'Ra4: GET /greetings'
     @greetings = Greeting.all
   end
 
@@ -14,6 +15,7 @@ class GreetingsController < ApplicationController
 
   # GET /greetings/new
   def new
+    logger.warn 'Ra4: GET /greetings/new'
     @greeting = Greeting.new
   end
 
